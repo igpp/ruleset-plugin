@@ -15,7 +15,7 @@
 			<path>..\src\Ruleset.java</path>
 			<source>true</source>
 			<index>0</index>
-			<active>false</active>
+			<active>true</active>
 		</docitem>
 		<docitem>
 			<path>..\src\State.java</path>
@@ -33,7 +33,7 @@
 			<path>..\src\Labeler.java</path>
 			<source>true</source>
 			<index>3</index>
-			<active>true</active>
+			<active>false</active>
 		</docitem>
 	</open_files>
 </workspace_user>
