@@ -1,0 +1,11 @@
+C:\Projects\igpp\java\ruleset\plugin\src\Compare.java
+C:\Projects\igpp\java\ruleset\plugin\src\FFHScan.java
+C:\Projects\igpp\java\ruleset\plugin\src\FormatDescription.java
+C:\Projects\igpp\java\ruleset\plugin\src\IMath.java
+C:\Projects\igpp\java\ruleset\plugin\src\LabelValue.java
+C:\Projects\igpp\java\ruleset\plugin\src\Lookup.java
+C:\Projects\igpp\java\ruleset\plugin\src\SpreadSheet.java
+C:\Projects\igpp\java\ruleset\plugin\src\Strings.java
+C:\Projects\igpp\java\ruleset\plugin\src\TabStartStop.java
+C:\Projects\igpp\java\ruleset\plugin\src\TargetPhrase.java
+C:\Projects\igpp\java\ruleset\plugin\src\Time.java
