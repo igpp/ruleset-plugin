@@ -1,4 +1,4 @@
-C:\Projects\igpp\java\ruleset\src\Action.java
-C:\Projects\igpp\java\ruleset\src\Labeler.java
-C:\Projects\igpp\java\ruleset\src\Ruleset.java
-C:\Projects\igpp\java\ruleset\src\State.java
+C:\Projects\igpp\java\ruleset\core\src\Action.java
+C:\Projects\igpp\java\ruleset\core\src\Labeler.java
+C:\Projects\igpp\java\ruleset\core\src\Ruleset.java
+C:\Projects\igpp\java\ruleset\core\src\State.java

@@ -3,9 +3,11 @@ package igpp.ruleset;
 // import igpp.util.*
 import igpp.util.Argument;
 import igpp.util.Digest;
-import igpp.util.MultiPrinter;
 import igpp.util.Variable;
 import igpp.util.VariableList;
+
+// import igpp.servlet.*
+import igpp.servlet.MultiPrinter;
 
 // import java.io.*
 import java.io.FileInputStream;

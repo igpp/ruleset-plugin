@@ -1,7 +1,7 @@
 package igpp.ruleset;
 
 // import igpp.util.*
-import igpp.util.MultiPrinter;
+import igpp.servlet.MultiPrinter;
 import igpp.util.Variable;
 import igpp.util.VariableList;
 
