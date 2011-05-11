@@ -21,7 +21,19 @@
 			<path>..\src\Lookup.java</path>
 			<source>true</source>
 			<index>1</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>..\src\App.java</path>
+			<source>true</source>
+			<index>2</index>
 			<active>true</active>
+		</docitem>
+		<docitem>
+			<path>..\src\Compare.java</path>
+			<source>true</source>
+			<index>3</index>
+			<active>false</active>
 		</docitem>
 	</open_files>
 </workspace_user>

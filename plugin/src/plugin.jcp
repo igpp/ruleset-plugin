@@ -26,6 +26,9 @@
 	<files>
 		<include>
 			<fileitem>
+				<path>App.java</path>
+			</fileitem>
+			<fileitem>
 				<path>Compare.java</path>
 			</fileitem>
 			<fileitem>

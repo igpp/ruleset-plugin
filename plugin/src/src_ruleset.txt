@@ -1,3 +1,4 @@
+C:\Projects\igpp\java\ruleset\plugin\src\App.java
 C:\Projects\igpp\java\ruleset\plugin\src\Compare.java
 C:\Projects\igpp\java\ruleset\plugin\src\FFHScan.java
 C:\Projects\igpp\java\ruleset\plugin\src\FormatDescription.java
