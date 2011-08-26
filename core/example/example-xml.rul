@@ -1,6 +1,0 @@
-<MESSAGE "This is a very simple example">
-<MESSAGE "Value of Something: $something">
-<OPTION FORCE_UPPER no>
-<INCLUDE constant.rul>
-<TEMPLATE template.xml>
-<RUN setvar.bat>

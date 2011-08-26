@@ -1,5 +1,0 @@
-<MESSAGE "This is a very simple example">
-<MESSAGE "Value of Something: $something">
-<INCLUDE constant.rul>
-<TEMPLATE template.lbl>
-<RUN setvar.bat>
