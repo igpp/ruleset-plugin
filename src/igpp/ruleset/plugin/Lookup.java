@@ -16,7 +16,7 @@ import java.util.Iterator;
 /** 
  * Multi-function lookup utility. This application is designed to function
  * as a plug-in the the PPI Rulesets. This plug-in supports a variety of lookup
- * related functions including the lookup of values in ASCII comma seperated
+ * related functions including the lookup of values in ASCII comma separated
  * value (CSV) tables.
  * <p>
  * The general form of usage is:<br>
@@ -29,7 +29,7 @@ import java.util.Iterator;
  * <p>
  * Supported lookup services are:<br>
  *<blockquote>
- *<b>Table</b>: Lookup values in from a file which contains ASCII, comma seperated
+ *<b>Table</b>: Lookup values from a file which contains ASCII, comma separated
  * values.
  * </blockquote>
  *
@@ -39,109 +39,6 @@ import java.util.Iterator;
  * @since		1.0
  */
 public class Lookup {
-	/** Nested class - internal use only.
-	 *  This is a nested class which is used to store items found in the
-	 *  lookup source which match the passed constraints. 
-	 */
-	static class Item implements Comparable {
-		/** Start time of the item **/	Calendar	mStart;
-		/** Stop time of the item **/	Calendar	mStop;
-		/** Value of the item. **/		String		mValue;
-		/** Overlap with interval **/	long		mOverlap;
-		
-		/** The method of comparing Items. The value assigned to this
-		 *  method matches the "order" option. 
-		 *  
-		 */ 
-		 static int	mCompareOrder = 0;
-		
-		/** 
-		 * Creates an instanace.
-		 */
-	 	public Item() {
-		}
-		
-		/** 
-		 * Sets the overlap of the passed start and stop times with this 
-		 * interval. Should be called after the mStart and mStop times
-		 * are set.
-		 *
-		 * @param	start	the start time of the interval.
-		 * @param stop		the stop time of the interval.
-		 *
-		 */
-		public void setOverlap(Calendar start, Calendar stop) {
-			long	startMilli;
-			long	stopMilli;
-			
-			if(Date.compareTo(mStart, start) < 0) {
-				startMilli = start.getTimeInMillis();
-			} else {
-				startMilli = mStart.getTimeInMillis();
-			}
-			
-			if(Date.compareTo(mStop, stop) > 0) {
-				stopMilli = stop.getTimeInMillis();
-			} else {
-				stopMilli = mStop.getTimeInMillis();
-			}
-			
-			mOverlap = stopMilli - startMilli;
-		}
-		
-		/** 
-		 * Compares two Items.
-		 */
-		public int compareTo(Object o) {
-			double	diff;
-			int		c = 0;
-			int		d = 1;
-			Item to = (Item) o;
-			
-			switch(mCompareOrder) {
-			case 0:	// AS_IS
-				return 1;
-			case 1: // CHRON_ASCENDING
-				c = Date.compareTo(mStart, to.mStart);
-				d = mValue.compareTo(to.mValue);
-				break;
-			case 2:	// CHRON_DESCENDING
-				c = -Date.compareTo(mStart, to.mStart);
-				d = mValue.compareTo(to.mValue);
-				break;
-			case 3:	// OVERLAP_ASCENDING
-				diff = mOverlap - to.mOverlap;
-				if(diff == 0) d = 0;
-				if(diff < 0) d = -1;
-				if(diff > 0) d = 1;
-				break;
-			case 4:	// OVERLAP_DESCENDING
-				diff = to.mOverlap - mOverlap;
-				if(diff == 0) d = 0;
-				if(diff < 0) d = -1;
-				if(diff > 0) d = 1;
-				break;
-			case 5: // SPAN_ASCENDING
-				diff = Date.span(mStart, mStop) - Date.span(to.mStart, to.mStop);
-				if(diff == 0) d = 0;
-				if(diff < 0) d = -1;
-				if(diff > 0) d = 1;
-				break;
-			case 6:	// SPAN_DESCENDING
-				diff = Date.span(to.mStart, to.mStop) - Date.span(mStart, mStop);
-				if(diff == 0) d = 0;
-				if(diff < 0) d = -1;
-				if(diff > 0) d = 1;
-				break;
-			case 7:	// Remove duplicates - UNIQUE
-				d = mValue.compareTo(to.mValue);
-				if(d != 0) d = 1;	// Keep same order - throw out duplicates
-				break;
-			}
-			if(c == 0) return d;
-			else return c;
-		}
-	}
 	
     /** 
      * Creates an instance.
@@ -385,7 +282,8 @@ public class Lookup {
 		String	order		= Argument.find(args, "ORDER", null, 1);
 		String	maxList		= Argument.find(args, "MAX", "0", 1);
 		String	single		= Argument.find(args, "SINGLE", "MIN_SPAN", 1);
-		String	format		= Argument.find(args, "FORMAT", "STRING", 1);
+		String	format		= Argument.find(args, "FORMAT", "AS-IS", 1);
+		String	delim		= Argument.find(args, "DELIM", ",", 1);
 		
 		// Enumerated METHOD tokens
 		final int	METHOD_PHASE 	= 0;
@@ -431,14 +329,16 @@ public class Lookup {
 		singleOpt.add("MIN_SPAN",		SINGLE_MIN_SPAN);
 		
 		// Enumerated METHOD tokens
-		final int	FORMAT_STRING 		= 0;
-		final int	FORMAT_IDENTIFIER 	= 1;
+		final int	FORMAT_AS_IS 		= 0;
+		final int	FORMAT_STRING 		= 1;
+		final int	FORMAT_IDENTIFIER 	= 2;
 		Argument	formatOpt = new Argument();
+		formatOpt.add("AS-IS",		FORMAT_AS_IS);
 		formatOpt.add("STRING",		FORMAT_STRING);
 		formatOpt.add("IDENTIFIER",	FORMAT_IDENTIFIER);
 		
 		ArrayList	findList = new ArrayList();
-		Table	file = new Table();
+		Table	table = new Table();
 		Calendar		time = Date.getNow();
 		boolean		leave = false;
 		String		buffer = "";
@@ -449,9 +349,6 @@ public class Lookup {
 		Calendar		timeStart = Date.getNow();
 		Calendar		timeStop = Date.getNow();
 		Item			item;
-		String		value;
-		String		delim;
-		String		quote;
 		ArrayList	valueList = new ArrayList();
 		int			cnt;
 		
@@ -471,6 +368,9 @@ public class Lookup {
 			Ruleset.show(header);
 			Ruleset.showRule(Action.MESSAGE, "\tSOURCE not specified");
 			leave = true;
+		}
+		if(delim == null) {
+			delim = ",";
 		}
 		if(start == null) {
 			if(!leave) Ruleset.showRule(Action.MESSAGE, header);
@@ -562,19 +462,19 @@ public class Lookup {
 		
 		// Open the table
 		try {
-			file.open(source);
+			table.open(source, delim);
 		} catch(Exception e) {
 			Ruleset.showRule(Action.MESSAGE, "Unable to open file: " + source);
 			return;
 		}
 
 		// Scan table for records		
-		while(file.readRecord() != -1) {
+		while(table.readRecord() != -1) {
 			try {
-				recordStart = Date.parse(file.getFieldValue(0), Date.PDS);
-				recordStop = Date.parse(file.getFieldValue(1), Date.PDS);
+				recordStart = Date.parse(table.getFieldValue(0), Date.PDS);
+				recordStop = Date.parse(table.getFieldValue(1), Date.PDS);
 			} catch(Exception e) {
-				Ruleset.showRule(Action.MESSAGE, "Error parsing record " + file.getRecordNumber());
+				Ruleset.showRule(Action.MESSAGE, "Error parsing record " + table.getRecordNumber());
 				continue;
 			}
 			switch(methodID) {
@@ -586,7 +486,7 @@ public class Lookup {
 					item.mStart = (Calendar) recordStart.clone();
 					item.mStop = (Calendar) recordStop.clone();
 					item.setOverlap(timeStart, timeStop);
-					item.mValue = file.getFieldValue(2);
+					item.mValue = table.getFieldValue(2);
 					findList.add(item);
 				}
 				break;
@@ -598,7 +498,7 @@ public class Lookup {
 					item.mStart = (Calendar) recordStart.clone();
 					item.mStop = (Calendar) recordStop.clone();
 					item.setOverlap(timeStart, timeStop);
-					item.mValue = file.getFieldValue(2);
+					item.mValue = table.getFieldValue(2);
 					findList.add(item);
 				}
 				break;
@@ -646,9 +546,9 @@ public class Lookup {
 		}
 		
 		// Build-up response
-		value = "";
-		delim = "";
-		quote = "";
+		String value = "";
+		String sep = "";
+		String quote = "";
 		if(valueList.size() == 0) {
 			value = "";
 		} else {
@@ -656,23 +556,130 @@ public class Lookup {
 			for(int i = 0; i < valueList.size(); i++) {
 				buffer = (String) valueList.get(i);
 				switch(formatID) {
+				case FORMAT_AS_IS:
+					value += sep + quote + buffer + quote;
+					break;
 				case FORMAT_STRING:
 					buffer = buffer.replace('_', ' ');
-					value += delim + quote + buffer + quote;
+					value += sep + quote + buffer + quote;
 					break;
 				case FORMAT_IDENTIFIER:
 					buffer = buffer.replace(' ', '_');
 					buffer = buffer.toUpperCase();
-					value += delim + buffer;
+					value += sep + buffer;
 					break;
 				}
-				delim = ", ";
+				sep = ", ";
 			}
 			if(valueList.size() > 1 || returnID == RETURN_LIST) value += " }";	// End of set
 		}
 	
 		Ruleset.showRule(Action.ASSIGN, parameter, value);
 		
-		file.close();
+		table.close();
+	}
+
+	/** Nested class - internal use only.
+	 *  This is a nested class which is used to store items found in the
+	 *  lookup source which match the passed constraints. 
+	 */
+	static class Item implements Comparable {
+		/** Start time of the item **/	Calendar	mStart;
+		/** Stop time of the item **/	Calendar	mStop;
+		/** Value of the item. **/		String		mValue;
+		/** Overlap with interval **/	long		mOverlap;
+		
+		/** The method of comparing Items. The value assigned to this
+		 *  method matches the "order" option. 
+		 *  
+		 */ 
+		 static int	mCompareOrder = 0;
+		
+		/** 
+		 * Creates an instanace.
+		 */
+	 	public Item() {
+		}
+		
+		/** 
+		 * Sets the overlap of the passed start and stop times with this 
+		 * interval. Should be called after the mStart and mStop times
+		 * are set.
+		 *
+		 * @param	start	the start time of the interval.
+		 * @param stop		the stop time of the interval.
+		 *
+		 */
+		public void setOverlap(Calendar start, Calendar stop) {
+			long	startMilli;
+			long	stopMilli;
+			
+			if(Date.compareTo(mStart, start) < 0) {
+				startMilli = start.getTimeInMillis();
+			} else {
+				startMilli = mStart.getTimeInMillis();
+			}
+			
+			if(Date.compareTo(mStop, stop) > 0) {
+				stopMilli = stop.getTimeInMillis();
+			} else {
+				stopMilli = mStop.getTimeInMillis();
+			}
+			
+			mOverlap = stopMilli - startMilli;
+		}
+		
+		/** 
+		 * Compares two Items.
+		 */
+		public int compareTo(Object o) {
+			double	diff;
+			int		c = 0;
+			int		d = 1;
+			Item to = (Item) o;
+			
+			switch(mCompareOrder) {
+			case 0:	// AS_IS
+				return 1;
+			case 1: // CHRON_ASCENDING
+				c = Date.compareTo(mStart, to.mStart);
+				d = mValue.compareTo(to.mValue);
+				break;
+			case 2:	// CHRON_DESCENDING
+				c = -Date.compareTo(mStart, to.mStart);
+				d = mValue.compareTo(to.mValue);
+				break;
+			case 3:	// OVERLAP_ASCENDING
+				diff = mOverlap - to.mOverlap;
+				if(diff == 0) d = 0;
+				if(diff < 0) d = -1;
+				if(diff > 0) d = 1;
+				break;
+			case 4:	// OVERLAP_DESCENDING
+				diff = to.mOverlap - mOverlap;
+				if(diff == 0) d = 0;
+				if(diff < 0) d = -1;
+				if(diff > 0) d = 1;
+				break;
+			case 5: // SPAN_ASCENDING
+				diff = Date.span(mStart, mStop) - Date.span(to.mStart, to.mStop);
+				if(diff == 0) d = 0;
+				if(diff < 0) d = -1;
+				if(diff > 0) d = 1;
+				break;
+			case 6:	// SPAN_DESCENDING
+				diff = Date.span(to.mStart, to.mStop) - Date.span(mStart, mStop);
+				if(diff == 0) d = 0;
+				if(diff < 0) d = -1;
+				if(diff > 0) d = 1;
+				break;
+			case 7:	// Remove duplicates - UNIQUE
+				d = mValue.compareTo(to.mValue);
+				if(d != 0) d = 1;	// Keep same order - throw out duplicates
+				break;
+			}
+			if(c == 0) return d;
+			else return c;
+		}
 	}
 }
