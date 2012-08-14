@@ -1,4 +1,4 @@
-pds.ruleset
+igpp.ruleset.plugin
 ======
 
 Collection of PDS/PPI plug-ins for the IGPP Ruleset processor.
