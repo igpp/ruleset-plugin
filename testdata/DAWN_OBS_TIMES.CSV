@@ -1,0 +1,97 @@
+2011-05-03T13:35:00,2011-05-03T14:05:30,VSA_OPNAV;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-05-10T07:00:00,2011-05-10T08:30:30,VSA_OPNAV_002;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-05-17T12:56:00,2011-05-17T13:26:30,VSA_OPNAV_003;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-05-26T03:33:00,2011-05-26T04:03:30,VSA_OPNAV_004;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-06-01T06:36:00,2011-06-01T07:06:30,VSA_OPNAV_005;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-06-08T15:21:00,2011-06-08T17:01:30,VSA_OPNAV_006;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-06-14T13:36:00,2011-06-14T14:36:30,VSA_OPNAV_007;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-06-17T12:36:00,2011-06-17T13:36:30,VSA_OPNAV_008;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-06-20T13:36:00,2011-06-20T14:36:30,VSA_OPNAV_009;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-06-24T04:06:00,2011-06-24T05:06:30,VSA_OPNAV_010;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-06-28T08:11:00,2011-06-28T10:11:30,VSA_OPNAV_011;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-06-30T04:51:00,2011-06-30T10:21:00,VSA_RC;Rotational characterization movie #1| 2 clear images every 8m 54s with all filters every 3rd station
+2011-07-04T00:36:00,2011-07-04T02:36:30,VSA_OPNAV_013;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-07-09T17:35:00,2011-07-09T20:32:00,VSA_MOON_SEARCH;Operational Sphere Moon Search 1x6 Mosaic 1 
+2011-07-09T20:42:00,2011-07-09T23:38:00,VSA_MOON_SEARCH_002;Operational Sphere Moon Search 1x6 Mosaic 2
+2011-07-09T23:48:00,2011-07-10T05:09:00,VSA_RC_002;Rotational characterization movie #2| 2 clear images every 8m 54s with all filters every 3rd station
+2011-07-10T05:21:00,2011-07-10T08:17:00,VSA_MOON_SEARCH_003;Operational Sphere Moon Search 1x6 Mosaic 3
+2011-07-13T03:06:00,2011-07-13T05:06:30,VSA_OPNAV_016;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-07-17T03:36:00,2011-07-17T05:36:30,VSA_OPNAV_017;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-07-18T20:36:00,2011-07-18T22:46:30,VSA_OPNAV_018;40 clear filter images alternating between Vesta and Star field exposure settings
+2011-07-23T18:15:00,2011-07-23T21:15:30,VSA_OPNAV_019;60 clear filter images (nadir) all with Vesta exposure settings
+2011-07-24T06:00:00,2011-07-24T11:30:30,VSA_RC_003;Rotational characterization movie #3 (equatorial)| clear filter every 5 min| other 7 filters every 20 min
+2011-07-24T20:36:31,2011-07-25T02:07:00,VSA_RC_003B;Rotational characterization movie #3b (sub-solar)| clear filter every 5 min| other 7 filters every 20 min
+2011-07-26T03:33:00,2011-07-26T04:48:30,VSA_OPNAV_021;14 nadir and off-nadir images
+2011-07-31T11:30:00,2011-07-31T12:45:30,VSA_OPNAV_022;15 nadir images
+2011-08-06T02:43:26,2011-08-06T03:58:56,VSA_OPNAV_023;12 nadir and off-nadir images
+2011-08-06T07:20:26,2011-08-06T13:01:26,VSA_C0_EQUATORIAL_MOSAIC;Eleven 1x3 equatorial mosaics  with clear and color images at every station
+2011-08-11T18:12:57,2011-08-11T20:12:57,VSS_C1_OPNAV;OpNav Images (1x3 limb mosaic)
+2011-08-11T20:12:57,2011-08-12T02:43:57,VSS_C1_NADIR_IMAGING;Nadir imaging with clear image every 30m + color  images every 60m
+2011-08-12T03:04:00,2011-08-12T16:05:00,VSS_C1_PUSH_BROOM;VIR Pushbroom and FC2 clear filter image every 20 m + 7 color images every 60 m
+2011-08-12T16:12:57,2011-08-12T16:12:57,VSS_C1_SOUTH_POLE_MOSAIC;FC2 South Pole mosaic  - Eleven 1x3 mosaics with clear and color images at each station
+2011-08-14T15:07:23,2011-08-14T17:07:23,VSS_C2_OPNAV;OpNav Images (1x3 limb mosaic)
+2011-08-14T17:17:23,2011-08-15T00:57:23,VSS_C2_NORTH_CUBES;12 VIR VIS+IR cubes with 10 FC images - 3 clear (start/middle/end) and 7 filters (middle) at each cube
+2011-08-15T01:09:23,2011-08-15T03:10:23,VSS_C2_LIMB_IMAGING;Limb imaging with clear image every 5m
+2011-08-15T10:52:23,2011-08-15T20:52:23,VSS_C2_SOUTH_CUBES;12 VIR VIS+IR cubes with 10 FC images - 3 clear (start/middle/end) and 7 filters (middle) at each cube
+2011-08-15T21:02:26,2011-08-15T23:23:26,VSS_C2_SOUTH_POLE_NADIR;Clear filter only every 5 minutes
+2011-08-17T12:10:25,2011-08-17T14:10:25,VSS_C3_OPNAV;OpNav Images (1x3 limb mosaic)
+2011-08-17T14:18:25,2011-08-17T20:19:25,VSS_C3_LIMB_IMAGING;Limb imaging with clear image every 5m
+2011-08-17T20:53:28,2011-08-18T09:54:28,VSS_C3_PUSH_BROOM;VIR Pushbroom and FC2 clear filter image every 20 m + 7 color images every 60 m
+2011-08-18T10:10:25,2011-08-18T16:13:25,VSS_C3_SOUTH_POLE_MOSAIC;FC2 South Pole mosaic  - Eleven 1x3 mosaics with clear and color images at each station
+2011-08-20T09:13:35,2011-08-20T11:13:35,VSS_C4_OPNAV;OpNav Images (1x3 limb mosaic)
+2011-08-20T11:23:35,2011-08-20T16:35:35,VSS_C4_NORTH_CUBES;10 VIR VIS+IR cubes with 10 FC images - 3 clear (start/middle/end) and 7 filters (middle) at each cube
+2011-08-20T16:41:35,2011-08-20T22:22:35,VSS_C4_EQUATORIAL_MOSAIC;FC2 equatorial mosaic  - Eleven 1x3 mosaics with clear and color images at each station
+2011-08-21T05:09:35,2011-08-21T13:03:35,VSS_C4_SOUTH_CUBES;10 VIR VIS+IR cubes with 10 FC images - 3 clear (start/middle/end) and 7 filters (middle) at each cube
+2011-08-23T06:07:27,2011-08-23T08:07:27,VSS_C5_OPNAV;OpNav Images (1x3 limb mosaic)
+2011-08-23T08:07:27,2011-08-23T10:08:27,VSS_C5_NADIR_IMAGING;Nadir imaging with clear image every 5m
+2011-08-23T10:18:27,2011-08-23T16:58:27,VSS_C5_NORTH_CUBES;12 VIR VIS+IR cubes with 3 FC images - 3 clear (start/middle/end)  at each cube
+2011-08-24T01:20:27,2011-08-24T08:00:27,VSS_C5_SOUTH_CUBES;12 VIR VIS+IR cubes with 3 FC images - 3 clear (start/middle/end)  at each cube
+2011-08-24T08:20:28,2011-08-24T14:51:28,VSS_C5_LIMB_IMAGING;Limb imaging with clear image every 5m
+2011-08-26T02:54:13,2011-08-26T10:55:13,VSS_C6_LIMB_IMAGING_001;Limb imaging with clear image every 5m
+2011-08-26T11:13:13,2011-08-26T16:25:13,VSS_C6_EQUATORIAL_CUBES;12 VIR VIS+IR cubes with 3 FC images - 3 clear (start/middle/end)  at each cube
+2011-08-26T16:42:13,2011-08-26T20:43:13,VSS_C6_LIMB_IMAGING_002;Limb imaging with clear image every 5m
+2011-08-26T21:03:13,2011-08-27T01:48:13,VSS_C6_SOUTH_CUBES;11 VIR VIS+IR cubes with 10 FC images - 3 clear (start/middle/end) at each cube
+2011-08-27T01:56:13,2011-08-27T03:56:13,VSS_C6_OPNAV;OpNav Images (1x3 limb mosaic)
+2011-08-27T04:05:43,2011-08-27T09:26:43,VSS_C6_LIMB_IMAGING_003;Limb imaging with clear image every 5m
+2011-08-29T00:30:32,2011-08-29T05:30:32,VSS_C7_NORTH_CUBES;8 VIR VIS+IR cubes with 3 FC images - 3 clear (start/middle/end)  at each cube
+2011-08-29T12:55:35,2011-08-29T22:26:35,VSS_C7_PUSH_BROOM;VIR Pushbroom and FC2 clear filter image every 20 m
+2011-09-03T18:40:00,2011-09-03T19:20:30,VTH_OPNAV_001;40 clear filter images with alternating short/long exposure settings
+2011-09-09T13:20:00,2011-09-09T14:00:30,VTH_OPNAV_002;40 clear filter images with alternating short/long exposure settings
+2011-09-17T20:20:00,2011-09-17T21:00:30,VTH_OPNAV_003;40 clear filter images with alternating short/long exposure settings
+2011-09-20T18:01:24,2011-09-21T00:32:24,VTH_BONUS_SCIENCE;6 VIR VIS+IR cubes (2 PB| 4 scan) plus nadir clear imaging every 5 minutes
+2011-09-25T08:17:56,2011-09-25T15:05:56,VTH_FC1_CHECKOUT;FC1 bi-annual checkout (nadir imaging) with VIR ride-along cubes
+2011-09-29T20:30:12,2011-10-06T01:16:34,VSH_C1_NADIR;10 orbits of nadir imaging - FC2: clear + F8/F3/F4/F5 lossless| F2/F6/F7 lossy and VIR: VIS+IR PB cubes
+2011-10-06T01:16:34,2011-10-11T05:21:02,VSH_C2_OFFNADIR1;10 orbits of off-nadir (ahead+8| cross+5) imaging - FC2: clear and VIR: VIS+IR PB cubes
+2011-10-11T05:21:02,2011-10-16T06:51:28,VSH_C3_OFFNADIR2;10 orbits of off-nadir (ahead-6| cross+2) imaging - FC2: clear and VIR: VIS+IR scan (north) and PB (south) cubes
+2011-10-16T06:51:28,2011-10-21T10:06:35,VSH_C4_OFFNADIR3;10 orbits of off-nadir (ahead+5| cross+0) imaging - FC2: clear and VIR: VIS+IR scan (north) and PB (south) cubes
+2011-10-21T10:06:35,2011-10-26T12:56:58,VSH_C5_OFFNADIR4;10 orbits of off-nadir (ahead+0| cross-5) imaging - FC2: clear and VIR: VIS+IR scan (north) and PB (south) cubes
+2011-10-26T12:56:58,2011-11-02T10:13:12,VSH_C6_NADIR;10 orbits of nadir imaging - FC2: clear + F8/F3/F4/F5 lossless| F2/F6/F7 lossy and VIR: VIS+IR PB cubes
+2011-11-08T01:16:00,2011-11-08T01:56:30,VSA_OPNAV_001;40 clear filter images with alternating short/long exposure settings
+2011-11-19T01:16:00,2011-11-19T01:56:30,VSA_OPNAV_004;40 clear filter images with alternating short/long exposure settings
+2011-11-20T13:16:00,2011-11-20T13:56:30,VSA_OPNAV_005;40 clear filter images with alternating short/long exposure settings
+2011-11-23T13:16:00,2011-11-23T13:56:30,VSA_OPNAV_006;40 clear filter images with alternating short/long exposure settings
+2011-11-28T01:16:00,2011-11-28T01:56:30,VSA_OPNAV_007;40 clear filter images with alternating short/long exposure settings
+2011-12-13T02:24:13,2011-12-17T08:46:35,VSL_CYCLE1;2 orbits of FC2 clear filter (F1) nadir imaging recovering the lost transfer BonusScience activities - compression and 2x2 binning test
+2011-12-17T08:46:35,2011-12-24T08:08:12,VSL_CYCLE2;15 orbits| 56 images/orbit of FC2 clear filter (F1) nadir imaging - VIR powered off
+2011-12-24T08:08:12,2011-12-31T07:46:17,VSL_CYCLE3;15 orbits| 56 images/orbit of FC2 clear filter (F1) nadir imaging - VIR powered off
+2011-12-31T07:46:17,2012-01-07T11:38:48,VSL_CYCLE4;15 orbits| 56 images/orbit of FC2 clear filter (F1) nadir imaging - VIR powered off
+2012-01-07T11:38:48,2012-01-14T06:42:19,VSL_CYCLE5;12 orbits| 42 images/orbit of FC2 clear filter (F1) nadir imaging - 7 orbits (2 VIS+IR| 5 VIS-only) VIR full-slit pushbroom cubes
+2012-01-14T06:42:19,2012-01-21T10:43:52,VSL_CYCLE6;S/C safing - no FC or VIR data acquired
+2012-01-21T10:43:52,2012-01-28T10:04:35,VSL_CYCLE7;12 orbits| 42 images/orbit of FC2 clear filter (F1) nadir imaging - 7 orbits (2 VIS+IR| 5 VIS-only) VIR full-slit pushbroom cubes
+2012-01-28T10:04:35,2012-02-04T05:16:44,VSL_CYCLE8;12 orbits| 42 images/orbit of FC2 clear filter (F1) nadir imaging - 7 orbits (2 VIS+IR| 5 VIS-only) VIR full-slit pushbroom cubes
+2012-02-04T05:16:44,2012-02-11T09:01:37,VSL_CYCLE9;13 orbits| 10 color F2-F3-F4  2x2 binned (3 clear| normal)| 90(40) images/orbit of FC2 nadir imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-02-11T09:01:37,2012-02-18T08:34:25,VSL_CYCLE10;13 orbits| 10 color F2-F3-F4  2x2 binned (3 clear| normal)| 90(40) images/orbit of FC2 nadir imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-02-18T08:34:25,2012-02-25T12:34:54,VSL_CYCLE11;13 orbits| 10 color F2-F3-F4  2x2 binned (3 clear| normal)| 90(40) images/orbit of FC2 nadir imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-02-25T12:34:54,2012-03-03T07:02:52,VSL_CYCLE12;13 orbits| 10 color F2-F3-F4  2x2 binned (3 clear| normal)| 90(40) images/orbit of FC2 nadir imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-03-03T07:02:52,2012-03-10T07:30:00,VSL_CYCLE13;16 orbits| 42 images/orbit of FC2 nadir clear filter (F1) imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-03-10T07:00:00,2012-03-17T08:30:00,VSL_CYCLE14;16 orbits| 42 images/orbit of FC2 nadir clear filter (F1) imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-03-17T06:00:00,2012-03-24T06:00:00,VSL_CYCLE15;16 orbits| 42 images/orbit of FC2 nadir clear filter (F1) imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-03-24T06:00:00,2012-03-31T06:00:00,VSL_CYCLE16;16 orbits| 42 images/orbit of FC2 nadir clear filter (F1) imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-03-31T06:00:00,2012-04-07T06:00:00,VSL_CYCLE17;16 orbits| 44 images/orbit of FC2 nadir clear filter (F1) imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-04-07T06:00:00,2012-04-14T06:00:00,VSL_CYCLE18;16 orbits| 44 images/orbit of FC2 nadir clear filter (F1) imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-04-14T06:00:00,2012-04-21T06:00:00,VSL_CYCLE19;16 orbits| 44 images/orbit of FC2 nadir clear filter (F1) imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-04-21T06:00:00,2012-04-28T06:00:00,VSL_CYCLE20;16 orbits| 44 images/orbit of FC2 nadir clear filter (F1) imaging - 4 orbits (2 full slit| 2 quarter slit) VIR VIS-IR pushbroom cubes
+2012-04-28T06:00:00,2012-05-05T06:00:00,VSL_CYCLE21;
+2012-05-05T06:00:00,2012-05-12T06:00:00,VSL_CYCLE22;
+2012-05-12T06:00:00,2012-05-19T06:00:00,VSL_CYCLE23;
+2012-05-19T06:00:00,2012-05-26T06:00:00,VSL_CYCLE24;
