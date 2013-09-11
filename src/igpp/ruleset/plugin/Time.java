@@ -29,8 +29,7 @@ import java.util.Calendar;
  * </blockquote>
  * See the descriptions for each service for required parameters.
  * <p>
- * All time formats are specified using the format specified in {@link PPITime}
- * and also supports formats specified in {@link Date}.
+ * All time formats are specified using the format specified in {@link Date}.
  * <p>
  * Results are returned as a ruleset assignment and are in the form:
  *
@@ -82,11 +81,11 @@ public class Time {
  * <dt><b>Parameter</b></dt><dd>the name of the variable to assign the output to.</dd>
  * <dt><b>time</b></dt><dd>the string with the time value to convert.</dd>
  * <dt><b>format</b></dt><dd>the name of the standard time format or a string containing the
- * 						the specification of the time format <i>time</i> is in. See {@link PPITime}
+ * 						the specification of the time format <i>time</i> is in. See {@link Date}
  *						for details of how to specify a time format.</dd>
  * <dt><b>output</b></dt><dd>the name of the standard time format or a string containing the
  * 						the specification of the time format to convert <i>time</i>
- *                      into and to assign to <i>name</i>. See {@link PPITime}
+ *                      into and to assign to <i>name</i>. See {@link Date}
  *						for details of how to specify a time format.</dd>
  * </blockquote>
  */
@@ -121,7 +120,7 @@ public class Time {
  * <blockquote>
  * <dt><b>parameter</b></dt><dd>the name of the variable to assign the output to.</dd>
  * <dt><b>output</b></dt><dd>the name of the standard time format or a string containing the
- * 						the specification of the time format <i>time</i> is in. See {@link PPITime}
+ * 						the specification of the time format <i>time</i> is in. See {@link Date}
  *						for details of how to specify a time format.</dd>
  * </blockquote>
  */

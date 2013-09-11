@@ -3,5 +3,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/pds-label-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/igpp-util-1.0.11.jar"/>
+	<classpathentry kind="lib" path="lib/igpp-ruleset-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/igpp-table-1.0.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
